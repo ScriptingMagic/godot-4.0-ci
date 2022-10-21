@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     zip \
     rsync \
+    libxcursor-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # When in doubt see the downloads page
