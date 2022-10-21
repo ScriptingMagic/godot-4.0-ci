@@ -4,14 +4,14 @@ on: push
 env:
   GODOT_RUNTIME: mono
   GODOT_VERSION: 4.0.beta3
-  EXPORT_NAME: ScriptingMagic
+  EXPORT_NAME: SpellCRYPT
 
 jobs:
   export-windows:
     name: Windows Export
     runs-on: ubuntu-20.04
     container:
-      image: ghcr.io/scriptingmagic/godot-4.0-mono-ci:latest
+      image: ghcr.io/spellcrypt/godot-4.0-mono-ci:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
     name: Linux Export
     runs-on: ubuntu-20.04
     container:
-      image: ghcr.io/scriptingmagic/godot-4.0-mono-ci:latest
+      image: ghcr.io/spellcrypt/godot-4.0-mono-ci:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -61,7 +61,7 @@ jobs:
     name: Web Export
     runs-on: ubuntu-20.04
     container:
-      image: ghcr.io/scriptingmagic/godot-4.0-mono-ci:latest
+      image: ghcr.io/spellcrypt/godot-4.0-mono-ci:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -94,7 +94,7 @@ jobs:
     name: Mac Export
     runs-on: ubuntu-20.04
     container:
-      image: ghcr.io/scriptingmagic/godot-4.0-mono-ci:latest
+      image: ghcr.io/spellcrypt/godot-4.0-mono-ci:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2

@@ -32,4 +32,4 @@ jobs:
           context: ./
           push: true
           tags: |
-            ghcr.io/scriptingmagic/${{ env.IMAGE_NAME }}:latest
+            ghcr.io/spellcrypt/${{ env.IMAGE_NAME }}:latest
