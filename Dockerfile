@@ -1,9 +1,10 @@
-FROM mono:latest
+FROM ubuntu:22.04
 LABEL author="https://github.com/aBARICHELLO/godot-ci/graphs/contributors"
 
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
+    dotnet6 \
     ca-certificates \
     git \
     git-lfs \
