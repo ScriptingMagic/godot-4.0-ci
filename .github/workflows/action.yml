@@ -8,6 +8,8 @@ on:
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     env:
       IMAGE_NAME: godot-4.0-mono-ci
     steps:
