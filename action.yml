@@ -9,5 +9,5 @@ jobs:
     name: godot-4.0-mono-ci
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/scripting-magic/godot-4.0-mono-ci:latest
+      image: ghcr.io/scriptingmagic/godot-4.0-mono-ci:latest
 
