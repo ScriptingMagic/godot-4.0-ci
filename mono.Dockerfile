@@ -29,8 +29,8 @@ ARG RELEASE_NAME="beta3"
 ARG SUBDIR="beta3"
 
 
-RUN wget https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}${SUBDIR}/mono/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_linux_x86_64.zip \
-    && wget https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}${SUBDIR}/mono/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_export_templates.tpz
+RUN wget https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/${SUBDIR}/mono/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_linux_x86_64.zip \
+    && wget https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/${SUBDIR}/mono/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_export_templates.tpz
 
 RUN mkdir ~/.cache \
     && mkdir -p ~/.config/godot \
