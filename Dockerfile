@@ -69,8 +69,10 @@ ENV PATH="/opt/butler/bin:${PATH}"
 
 RUN mkdir -p /usr/local/lib
 
-COPY libvk_swiftshader.so.tar.gz /root
-COPY vk_swiftshader_icd.json /root
+RUN wget https://github.com/godotengine/godot/files/6215523/libvk_swiftshader.so.tar.gz \
+    && tar -xvf libvk_swiftshader.so.tar.gz \
+    && mv libvk_swiftshader.so /usr/local/lib/libvk_swiftshader.so \
+    && rm -f libvk_swiftshader.so.tar.gz
 
-RUN tar -xvf /root/libvk_swiftshader.so.tar.gz -C /usr/local/lib && rm -rf /root/libvk_swiftshader.so.tar.gz
+COPY vk_swiftshader_icd.json /root
 
