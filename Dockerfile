@@ -66,3 +66,11 @@ RUN bash /opt/butler/getbutler.sh
 RUN /opt/butler/bin/butler -V
 
 ENV PATH="/opt/butler/bin:${PATH}"
+
+RUN mkdir -p /usr/local/lib
+
+COPY libvk_swiftshader.so.tar.gz /root
+COPY vk_swiftshader_icd.json /root
+
+RUN tar -xvf /root/libvk_swiftshader.so.tar.gz -C /usr/local/lib && rm -rf /root/libvk_swiftshader.so.tar.gz
+
