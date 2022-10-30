@@ -55,6 +55,10 @@ RUN mkdir ~/.cache \
     && mv templates/* ~/.local/share/godot/templates/${GODOT_VERSION}.${RELEASE_NAME}.mono \
     && rm -f Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_export_templates.tpz Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_linux_x86_64.zip
 
+RUN wget https://github.com/facebookincubator/FBX2glTF/releases/download/v0.9.7/FBX2glTF-linux-x64 \
+    && mv FBX2glTF-linux-x64 /usr/local/bin/FBX2glTF \
+    && chmod +x /usr/local/bin/FBX2glTF
+
 ADD getbutler.sh /opt/butler/getbutler.sh
 RUN bash /opt/butler/getbutler.sh
 RUN /opt/butler/bin/butler -V
