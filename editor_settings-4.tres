@@ -1,0 +1,4 @@
+[gd_resource type="EditorSettings" format=3]
+
+[resource]
+filesystem/import/fbx/fbx2gltf_path = "/usr/local/bin/FBX2glTF"

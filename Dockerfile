@@ -59,6 +59,8 @@ RUN wget https://github.com/facebookincubator/FBX2glTF/releases/download/v0.9.7/
     && mv FBX2glTF-linux-x64 /usr/local/bin/FBX2glTF \
     && chmod +x /usr/local/bin/FBX2glTF
 
+COPY editor_settings-4.tres /root/.config/godot/editor_settings-4.tres
+
 ADD getbutler.sh /opt/butler/getbutler.sh
 RUN bash /opt/butler/getbutler.sh
 RUN /opt/butler/bin/butler -V
