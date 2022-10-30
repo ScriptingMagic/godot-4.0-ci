@@ -3,7 +3,11 @@ LABEL author="https://github.com/aBARICHELLO/godot-ci/graphs/contributors"
 
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y \
+
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && \
+    && apt-get update && apt-get install -y \
+    xvfb \
     dotnet6 \
     ca-certificates \
     git \
@@ -14,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     zip \
     rsync \
+    yarn \
     build-essential scons pkg-config libx11-dev libxcursor-dev libxinerama-dev \
     libgl1-mesa-dev libglu-dev libasound2-dev libpulse-dev libudev-dev libxi-dev libxrandr-dev yasm \
     && rm -rf /var/lib/apt/lists/*
